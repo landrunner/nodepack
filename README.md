@@ -1,5 +1,5 @@
 # nodepack
-This is a Docker image in order to compile and pack a node project with dependent node_modules.  
+This is a Docker image to compile and pack a node project with dependent node_modules.  
 It also can be used for compiling dependent node modules for other platforms.
 
 ## Usage
