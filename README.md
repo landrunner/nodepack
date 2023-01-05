@@ -15,9 +15,10 @@ docker run -v /$(pwd):/work --rm -t landrunner1/nodepack:18
 ```
 
 If you want to compile C++ code of dependent moudles for another platform, you can specify the platform.
+Currentry, ```linux/arm/v7```, ```linux/arm64```, ```linux/amd64``` are available for the platform.
 ```
 cd path_to_your_project
-docker run -v /$(pwd):/work --platform linux/arm --rm -t landrunner1/nodepack:18
+docker run -v /$(pwd):/work --platform linux/arm/v7 --rm -t landrunner1/nodepack:18
 ```
 
 ### DockerHub
