@@ -11,7 +11,7 @@ docker run --rm --privileged multiarch/qemu-user-static:register
 ### Compile and package
 ```
 cd path_to_your_project
-docker -v /$(pwd):/work --rm -t landrunner1/nodepack:18
+docker run -v /$(pwd):/work --rm -t landrunner1/nodepack:18
 ```
 
 If you want to compile C++ code of dependent moudles for another platform, you can specify the platform.
