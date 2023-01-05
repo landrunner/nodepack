@@ -10,7 +10,7 @@ cd $WORKDIR
 
 if [ `jq '.bundleDependencies' package.json` = "null" ]; then
   mv package.json package.json.org 
-  jq '. + {"bundleDependencies": "true"}' package.json.org > package.json
+  jq '. + {"bundleDependencies": true}' package.json.org > package.json
 fi
 
 npm install --production --verbose
