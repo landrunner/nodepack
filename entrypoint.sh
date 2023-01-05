@@ -1,7 +1,7 @@
 #!/bin/sh
 
 WORKDIR="/work"
-if [ -d $1 ]; then
+if [ -n "$1" ] && [ -d $1 ]; then
   WORKDIR=$1 
 fi
 
