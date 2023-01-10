@@ -8,7 +8,7 @@ fi
 echo "using $WORKDIR..."
 cd $WORKDIR
 
-if [ `jq '.bundleDependencies' package.json` = "null" ]; then
+if [ `jq '.bundleDependencies' package.json` == "null" ]; then
   mv package.json package.json.org 
   jq '. + {"bundleDependencies": true}' package.json.org > package.json
 fi
