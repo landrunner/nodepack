@@ -5,7 +5,7 @@ It also can be used for compiling dependent node modules for other platforms.
 ## Usage
 ### Install Cross Docker Environment
 ```
-docker run --rm --privileged multiarch/qemu-user-static:register
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 ```
 
 ### Compile and package
