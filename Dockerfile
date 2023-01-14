@@ -1,7 +1,7 @@
 FROM node:18-slim
 
 RUN apt-get update && \
-    apt-get -y install g++ cmake jq && \
+    apt-get -y install g++ cmake jq python3 && \
     apt-get clean --yes && \
     rm -rf /var/lib/apt/lists/*
 RUN npm install -g typescript
