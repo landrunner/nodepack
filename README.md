@@ -1,9 +1,8 @@
 # nodepack
-This is a Docker image to compile and pack a node project with dependent node_modules.  
-It also can be used for compiling dependent node modules for other platforms.
+This Docker image is designed to compile and package a Node.js project along with its dependent node_modules. It can also be used to compile dependent node modules for other platforms.
 
 ## Usage
-### Install Cross Docker Environment
+### Install QEMU Environment
 ```
 sudo apt-get install qemu-user-static
 ```
@@ -14,8 +13,8 @@ cd path_to_your_project
 docker run -v /$(pwd):/work --rm -t landrunner1/nodepack:18
 ```
 
-When you want to compile C++ code of dependent moudles for another platform, you can specify the platform.
-Currently, ```linux/arm/v7```, ```linux/arm64```, ```linux/amd64``` are available for the platform.
+If you want to compile C++ code of dependent modules for another platform, you can specify the platform. 
+Currently, the following platforms are available :  ```linux/arm/v7```, ```linux/arm64```, ```linux/amd64```.
 ```
 cd path_to_your_project
 docker run -v /$(pwd):/work --platform linux/arm/v7 --rm -t landrunner1/nodepack:18
@@ -29,3 +28,5 @@ docker run -v /$(pwd):/work --env type=ts --rm -t landrunner1/nodepack:18
 ### DockerHub
 https://hub.docker.com/repository/docker/landrunner1/nodepack
 
+
+Please note that this is a simplified revision, and if you need any specific changes or additional information, feel free to let me know.
